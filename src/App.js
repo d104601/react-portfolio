@@ -1,18 +1,18 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/header';
-import Body from './components/body';
+import Main from './components/body';
 import Footer from './components/footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header />
-        <Body />
-        <Footer />
+    <div className="App-header">
+      <header>
+       <Header />
       </header>
+      <Main />
+      <Footer />      
     </div>
   );
 }
 
 export default App;
+
