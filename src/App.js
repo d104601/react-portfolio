@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/header';
 import Home from './components/main-home';
 import About from './components/main-about';
+import Projects from './components/main-projects';
 import Contact from './components/main-contact';
 import Footer from './components/footer';
 
@@ -19,6 +20,7 @@ function App() {
   const getProjects = () => {
     setCurrentPage("projects");
   }
+
   const getContact = () => {
     setCurrentPage("contact");
   }
@@ -29,6 +31,8 @@ function App() {
         return <Home />
       case "about":
         return <About />
+      case "projects":
+        return <Projects />
       case "contact":
         return <Contact />
     }
@@ -40,6 +44,7 @@ function App() {
         <Header
           getHome={getHome}
           getAbout={getAbout}
+          getProjects={getProjects}
           getContact={getContact}
         />
       </header>
@@ -47,7 +52,7 @@ function App() {
         {page()}
       </main>
       <footer class="bd-footer">
-       <Footer />      
+        <Footer />      
       </footer>
     </div>
   );

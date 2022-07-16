@@ -14,7 +14,7 @@ function navbar(props) {
                             <a class="nav-link" href="#about" onClick={props.getAbout}><h4>About</h4></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#projects" ><h4>Projects</h4></a>
+                            <a class="nav-link" href="#projects" onClick={props.getProjects}><h4>Projects</h4></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact" onClick={props.getContact}><h4>Contact</h4></a>
