@@ -20,7 +20,7 @@ function navbar(props) {
                             <a class="nav-link" href="#contact" onClick={props.getContact}><h4>Contact</h4></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#resume"><h4>Resume</h4></a>
+                            <a class="nav-link" href="#resume" onClick={props.getResume}><h4>Resume</h4></a>
                         </li>
                     </ul>
                 </div>

@@ -3,6 +3,7 @@ import Header from './components/header';
 import About from './components/main-about';
 import Projects from './components/main-projects';
 import Contact from './components/main-contact';
+import Resume from './components/main-resume';
 import Footer from './components/footer';
 import "./style/style.css";
 
@@ -22,6 +23,10 @@ function App() {
     setCurrentPage("contact");
   }
 
+  const getResume = () => {
+    setCurrentPage("resume");
+  }
+
   const page = () => {
     switch(currentPage) {
       case "about":
@@ -30,6 +35,8 @@ function App() {
         return <Projects />
       case "contact":
         return <Contact />
+      case "resume":
+        return <Resume />
       default:
         return <About />
     }
@@ -42,6 +49,7 @@ function App() {
           getAbout={getAbout}
           getProjects={getProjects}
           getContact={getContact}
+          getResume={getResume}
         />
       </header>
       <main class="p-3 bg-light">
