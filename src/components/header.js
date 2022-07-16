@@ -8,13 +8,13 @@ function navbar() {
                     <h3 class="">Taeyong Lee</h3>
                 </a>
                 
-                <div class="navbar-collapse" id="navbarNav">
+                <div class="navbar-collapse" >
                     <ul class="navbar-nav ms-md-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/"><h4>About me</h4></a>
+                            <a class="nav-link" href="/"><h4>About</h4></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/"><h4>Portfolio</h4></a>
+                            <a class="nav-link" href="/"><h4>Projects</h4></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/"><h4>Contact</h4></a>

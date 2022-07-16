@@ -1,5 +1,5 @@
 import Header from './components/header';
-import Main from './components/body';
+import Main from './components/main';
 import Footer from './components/footer';
 
 function App() {
@@ -8,8 +8,12 @@ function App() {
       <header>
        <Header />
       </header>
-      <Main />
-      <Footer />      
+      <main>
+        <Main />
+      </main>
+      <footer class="bd-footer">
+       <Footer />      
+      </footer>
     </div>
   );
 }
