@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
-import Header from './components/header';
-import Home from './components/main-home';
-import About from './components/main-about';
-import Projects from './components/main-projects';
-import Contact from './components/main-contact';
-import Footer from './components/footer';
+import Header from './components/Header';
+import About from './components/Main-about';
+import Projects from './components/Main-projects';
+import Contact from './components/Main-contact';
+import Footer from './components/Footer';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("home");
-
-  const getHome = () => {
-    setCurrentPage("home");
-  }
+  const [currentPage, setCurrentPage] = useState("about");
 
   const getAbout = () => {
     setCurrentPage("about");
@@ -27,14 +22,14 @@ function App() {
 
   const page = () => {
     switch(currentPage) {
-      case "home":
-        return <Home />
       case "about":
         return <About />
       case "projects":
         return <Projects />
       case "contact":
         return <Contact />
+      default:
+        return <About />
     }
   }
 
@@ -42,7 +37,6 @@ function App() {
     <div className="App-header">
       <header>
         <Header
-          getHome={getHome}
           getAbout={getAbout}
           getProjects={getProjects}
           getContact={getContact}
