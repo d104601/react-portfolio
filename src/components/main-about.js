@@ -4,8 +4,8 @@ import Profile from '../img/profile.jpg';
 function about() {
     return (
         <div class="container justify-content-center">
-            <div class="text-center">
-                <img src={Profile} class="img-thumbnail" alt="profile pic" />
+            <div class="text-center mh-50">
+                <img src={Profile} class="img-fluid" alt="profile pic" />
             </div>
             <h1 class="text-center my-3">About Me</h1>
             <p>

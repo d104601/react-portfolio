@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Header from './components/Header';
-import About from './components/Main-about';
-import Projects from './components/Main-projects';
-import Contact from './components/Main-contact';
-import Footer from './components/Footer';
+import Header from './components/header';
+import About from './components/main-about';
+import Projects from './components/main-projects';
+import Contact from './components/main-contact';
+import Footer from './components/footer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState("about");
@@ -42,10 +42,10 @@ function App() {
           getContact={getContact}
         />
       </header>
-      <main>
+      <main class="p-3">
         {page()}
       </main>
-      <footer class="bd-footer">
+      <footer class="">
         <Footer />      
       </footer>
     </div>
