@@ -1,0 +1,10 @@
+img {
+    max-height: 300px;
+    max-width: 300px;
+}
+
+@media (max-width: 767px) {
+    .navbar .fixed-bottom {
+        position: relative;
+    }
+}

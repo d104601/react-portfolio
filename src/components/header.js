@@ -2,7 +2,7 @@ import React from 'react';
 
 function navbar(props) {
     return (
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
             <div class="container text-center justify-content-center">
                 <a class="navbar-brand" href="/">
                     <h3 class="">Taeyong Lee</h3>

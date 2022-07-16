@@ -4,6 +4,8 @@ import About from './components/main-about';
 import Projects from './components/main-projects';
 import Contact from './components/main-contact';
 import Footer from './components/footer';
+import "./style/style.css";
+
 
 function App() {
   const [currentPage, setCurrentPage] = useState("about");
@@ -42,10 +44,10 @@ function App() {
           getContact={getContact}
         />
       </header>
-      <main class="p-3">
+      <main class="p-3 bg-light">
         {page()}
       </main>
-      <footer class="">
+      <footer>
         <Footer />      
       </footer>
     </div>
