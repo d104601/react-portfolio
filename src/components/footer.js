@@ -9,7 +9,7 @@ function footer() {
                         <a class="nav-link px-2" href="https://github.com/d104601">Github</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-lg px-2" href="https://www.linkedin.com/in/taeyonglee920716/">LinkedIn</a>
+                        <a class="nav-link  px-2" href="https://www.linkedin.com/in/taeyonglee920716/">LinkedIn</a>
                     </li>
                 </ul>
             </div>
