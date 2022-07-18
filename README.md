@@ -21,4 +21,4 @@ Click the link in "Deployed Website" below to run the application.
 To run in local, open your browser and visit http://localhost:3000.
 
 ## Deployed Application
-https://jate-by-taeyong-lee.herokuapp.com/
+https://taeyong-lee-portfolio.herokuapp.com/
