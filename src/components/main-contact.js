@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {validateEmpty, validateEmail} from '../util/helper';
+import emailjs from '@emailjs/browser';
 
 function Form() {
-
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -13,15 +13,17 @@ function Form() {
 
     const [sent, setSent] = useState("");
 
+    const formParam = useRef();
+
     const handleInputChange = (e) => {
         const { target } = e;
         const inputType = target.name;
         const inputValue = target.value;
 
-        if(inputType === "name") {
+        if(inputType === "from_name") {
             setName(inputValue);
         }
-        else if(inputType === "email") {
+        else if(inputType === "from_email") {
             setEmail(inputValue);
         }
         else {
@@ -60,9 +62,8 @@ function Form() {
         }
     };
 
-    const handleFormSubmit = (e) => {
+    const HandleFormSubmit = (e) => {
         e.preventDefault();
-
         if (
             !validateEmail(email) ||
             !validateEmpty(message) ||
@@ -70,25 +71,27 @@ function Form() {
         ) {
             return;
         }
+        setSent("Thank you for sending message. I will reply ASAP.");
         setName("");
         setEmail("");
         setMessage("");
-        setSent("Thank you for sending message. I will reply ASAP.");
     };
+
+
 
     return (
         <div class="container min-vw-25">
-            <h1 class="text-center my-3">Contact</h1>
-            <p class="text-center">You can also send email directly as <a href="mailto:d104601@hotmail.com">Click here</a></p>
-            <form className="form">
-                <div class="mb-3">
-                    <label class="form-label">Name:</label>
+            <h1 className="text-center my-3">Contact</h1>
+            <p className="text-center">You can also send email directly as <a href="mailto:d104601@hotmail.com">Click here</a></p>
+            <form className="form" onSubmit={HandleFormSubmit}>
+                <div className="mb-3">
+                    <label className="form-label">Name:</label>
                     <input
                         value={name}
-                        name="name"
+                        name="from_name"
                         onChange={handleInputChange}
                         onBlur={checkName}
-                        class="form-control"
+                        className="form-control"
                         type="text" 
                     />
                     {nameError}
@@ -98,10 +101,10 @@ function Form() {
                     <label class="form-label">Email:</label>
                     <input
                         value={email}
-                        name="email"
+                        name="from_email"
                         onChange={handleInputChange}
                         onBlur={checkEmail}
-                        class="form-control"
+                        className="form-control"
                         type="email" 
                     />
                     {emailError}
@@ -114,17 +117,18 @@ function Form() {
                         name="message"
                         onChange={handleInputChange}
                         onBlur={checkMessage}
-                        class="form-control"
+                        className="form-control"
                         rows="5"
                         type="text"
                     />
                     {messageError}
                 </div>
+                <div className="text-center">
+                    <h5>{sent}</h5>
+                    <input type="submit" className="btn btn-primary btn-lg" value="Send"/>
+                </div>
             </form>
-            <div class="text-center">
-                <h5>{sent}</h5>
-                <button type="submit" class="btn btn-primary btn-lg" onClick={handleFormSubmit}>Send</button>
-            </div>
+            
         </div>
     );
 }
