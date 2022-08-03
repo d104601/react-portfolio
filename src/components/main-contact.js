@@ -79,6 +79,7 @@ function Form() {
     return (
         <div class="container min-vw-25">
             <h1 class="text-center my-3">Contact</h1>
+            <p class="text-center">You can also send email directly as <a href="mailto:d104601@hotmail.com">Click here</a></p>
             <form className="form">
                 <div class="mb-3">
                     <label class="form-label">Name:</label>

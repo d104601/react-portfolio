@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header from './components/header';
+import Home from './components/home';
 import About from './components/main-about';
 import Projects from './components/main-projects';
 import Contact from './components/main-contact';
@@ -9,7 +10,11 @@ import "./style/style.css";
 
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("about");
+  const [currentPage, setCurrentPage] = useState("");
+
+  const getHome = () => {
+    setCurrentPage("/");
+  }
 
   const getAbout = () => {
     setCurrentPage("about");
@@ -38,7 +43,7 @@ function App() {
       case "resume":
         return <Resume />
       default:
-        return <About />
+        return <Home />
     }
   }
 
@@ -46,13 +51,14 @@ function App() {
     <div className="App-header">
       <header>
         <Header
+          getHome={getHome}
           getAbout={getAbout}
           getProjects={getProjects}
           getContact={getContact}
           getResume={getResume}
         />
       </header>
-      <main class="p-3 bg-light">
+      <main className="p-3">
         {page()}
       </main>
       <footer>

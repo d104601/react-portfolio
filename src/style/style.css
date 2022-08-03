@@ -3,6 +3,22 @@ img {
     max-width: 300px;
 }
 
+.rgba {
+    background-color: rgba( 255, 255, 255, 0.7 );
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+main {
+    display:flex;
+    min-height: 70vh;
+    align-items:center;
+}
+
+#root {
+    font-family: sans-serif;
+}
+
 @media (max-width: 767px) {
     .navbar .fixed-bottom {
         position: relative;

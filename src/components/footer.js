@@ -1,19 +1,27 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faGithub,
+    faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 function footer() {
     return (
-        <nav class="navbar navbar-expand-lg p-4 mt-4 mobile-nofixed navbar-dark bg-dark">
-            <div class="container text-center justify-content-center">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link px-2" href="https://github.com/d104601">Github</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  px-2" href="https://www.linkedin.com/in/taeyonglee920716/">LinkedIn</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div className="container text-center pb-3">
+            <ul className="nav justify-content-center border-bottom pb-3 mb-3">
+                <li className="nav-item">
+                    <a className="nav-link px-2 fs-2 text-black" href="https://github.com/d104601">
+                        <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+                    </a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link px-2 fs-2 text-black" href="https://www.linkedin.com/in/taeyonglee920716/">
+                        <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+                    </a>
+                </li>
+            </ul>
+            <p>© Taeyong Lee 2022. All Right Reserved</p>
+        </div>
     );
 }
 

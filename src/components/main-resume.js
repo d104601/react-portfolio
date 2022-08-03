@@ -1,6 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-function resume() {
+function Resume() {
+    const [languages] = useState([
+        "Java", "Python", "Javascript", "C++"
+    ]);
+    const [frontEnd] = useState([
+        "HTML", "CSS", "React", "Webpack"
+    ]);
+    const [backEnd] = useState([
+        "Node.js", "Express", "MySQL", "MongoDB"
+    ]);
+
     return(
         <div class="container">
             <h1 class="my-3 text-center">Resume</h1>
@@ -8,29 +18,32 @@ function resume() {
             
             <h3>Programming Languages</h3>
             <ul class="my-3 list-group list-group-flush">
-                <li class="list-group-item">Java</li>
-                <li class="list-group-item">Python</li>
-                <li class="list-group-item">Javascript</li>
-                <li class="list-group-item">C++</li>
+                {languages.map(lang => {
+                    return (
+                        <li class="list-group-item">{lang}</li>
+                    )
+                })}
             </ul>
 
             <h3>Front-End</h3>
             <ul class="my-3 list-group list-group-flush">
-                <li class="list-group-item">HTML</li>
-                <li class="list-group-item">CSS</li>
-                <li class="list-group-item">Javascript</li>
-                <li class="list-group-item">React</li>
-                <li class="list-group-item">Bootstrap</li>
+                {frontEnd.map(front => {
+                    return (
+                        <li class="list-group-item">{front}</li>
+                    )
+                })}
             </ul>
 
             <h3>Back-End</h3>
             <ul class="my-3 list-group list-group-flush">
-                <li class="list-group-item">Express</li>
-                <li class="list-group-item">Node.js</li>
-                <li class="list-group-item">APIs</li>
+                {backEnd.map(back => {
+                    return (
+                        <li class="list-group-item">{back}</li>
+                    )
+                })}
             </ul>
         </div>
     );
 }
 
-export default resume;
+export default Resume;
