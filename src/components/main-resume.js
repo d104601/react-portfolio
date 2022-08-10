@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 
 function Resume() {
     const [languages] = useState([
-        "Java", "Python", "Javascript", "C++"
+        "Java", "Python", "Javascript", "Kotlin"
     ]);
     const [frontEnd] = useState([
-        "HTML", "CSS", "React", "Webpack"
+        "HTML", "CSS", "Bootstrap", "React"
     ]);
     const [backEnd] = useState([
         "Node.js", "Express", "MySQL", "MongoDB"
@@ -14,7 +14,7 @@ function Resume() {
     return(
         <div class="container">
             <h1 class="my-3 text-center">Resume</h1>
-            <a href="https://drive.google.com/file/d/1AlE7OZAvYF98Fmo1lC_E4oBcsiIGDjDW/view?usp=sharing" class="btn btn-primary btn-lg my-4">Click here to see full resume</a>
+            <a href="https://drive.google.com/file/d/1AlE7OZAvYF98Fmo1lC_E4oBcsiIGDjDW/view?usp=sharing" className="btn btn-dark btn-lg my-4">Click here to see full resume</a>
             
             <h3>Programming Languages</h3>
             <ul class="my-3 list-group list-group-flush">
