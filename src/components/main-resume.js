@@ -5,7 +5,7 @@ function Resume() {
         "Java", "Python", "Javascript", "Kotlin"
     ]);
     const [frontEnd] = useState([
-        "HTML", "CSS", "Bootstrap", "React"
+        "HTML", "CSS", "Bootstrap", "Tailwind CSS", "React"
     ]);
     const [backEnd] = useState([
         "Node.js", "Express", "MySQL", "MongoDB"

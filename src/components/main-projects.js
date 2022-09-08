@@ -36,6 +36,13 @@ function Projects() {
     ]);
     const [singleProjects, setSingleProjects] = useState([
         {
+            name: "Personal Blog",
+            description: "A sample web Application that user can post text-based article with own account.",
+            tech: "React, Tailwind CSS, MongoDB, Express.js, Node.js,",
+            app: "https://blog-mern-by-taeyong.herokuapp.com/",
+            github: "https://github.com/d104601/blog-mern"
+        },
+        {
             name: "Text Editor",
             image: editor,
             description: "Text editor that runs in the browser. The application meets the PWA criteria for using in offline",
@@ -56,6 +63,38 @@ function Projects() {
     return (
         <div class="container justify-content-center">
             <h1 className="text-center">Projects</h1>
+            <h2 className="">Personal Projects</h2>
+            {singleProjects.map(project => {
+                return (
+                    <div className="card mb-3">
+                        <div className='row no-gutters'>
+                            <div className='col-md-3 text-center'>
+                                <img src={project.image} className='card-img flex-column'></img>
+                            </div>
+                            <div className='col-md-7'>
+                                <div className='card-body '>
+                                    <h5 className='card-title'>{project.name}</h5>
+                                    <p className='card-text'>{project.description}</p>
+                                    <p className='card-text'>Tech used: {project.tech}</p>
+                                </div>
+                            </div>
+                            <div className='col-md-2'>
+                                <div className='card-body text-center'>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <a href={project.app} className="btn btn-dark btn-block">App Page</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                        <a href={project.github} className="btn btn-dark btn-block">Github</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                )
+            })}
+
             <h2 className="">Team Projects</h2>
             {teamProjects.map(project => {
                 return (
@@ -88,37 +127,7 @@ function Projects() {
                 )
             })}
             
-            <h2 className="">Personal Projects</h2>
-            {singleProjects.map(project => {
-                return (
-                    <div className="card mb-3">
-                        <div className='row no-gutters'>
-                            <div className='col-md-3 text-center'>
-                                <img src={project.image} className='card-img flex-column'></img>
-                            </div>
-                            <div className='col-md-7'>
-                                <div className='card-body '>
-                                    <h5 className='card-title'>{project.name}</h5>
-                                    <p className='card-text'>{project.description}</p>
-                                    <p className='card-text'>Tech used: {project.tech}</p>
-                                </div>
-                            </div>
-                            <div className='col-md-2'>
-                                <div className='card-body text-center'>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <a href={project.app} className="btn btn-dark btn-block">App Page</a>
-                                        </li>
-                                        <li class="list-group-item">
-                                        <a href={project.github} className="btn btn-dark btn-block">Github</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                )
-            })}
+            
         </div>
     );
 }
