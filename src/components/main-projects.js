@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import news from '../img/news.jpg';
 import cloth from '../img/bcloth.webp';
 import editor from '../img/editor.jpg';
@@ -14,9 +14,9 @@ function Projects() {
             image: gallery,
             description: "A sample web application that user can upload their own image that gets put in the museum.",
             tech: "Mongo.db, Express.js, Node.js, Axios, Bootstrap, Apollo, Graphql",
-            app:"https://curate-22.herokuapp.com/",
+            app: "https://curate-22.herokuapp.com/",
             github: "https://github.com/edgarmendez94/virtual-library",
-        }, 
+        },
         {
             name: "Cub2Bear",
             image: cloth,
@@ -85,12 +85,12 @@ function Projects() {
                                             <a href={project.app} className="btn btn-dark btn-block">App Page</a>
                                         </li>
                                         <li class="list-group-item">
-                                        <a href={project.github} className="btn btn-dark btn-block">Github</a>
+                                            <a href={project.github} className="btn btn-dark btn-block">Github</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 )
             })}
@@ -117,17 +117,17 @@ function Projects() {
                                             <a href={project.app} className="btn btn-dark btn-block">App Page</a>
                                         </li>
                                         <li class="list-group-item">
-                                        <a href={project.github} className="btn btn-dark btn-block">Github</a>
+                                            <a href={project.github} className="btn btn-dark btn-block">Github</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 )
             })}
-            
-            
+
+
         </div>
     );
 }

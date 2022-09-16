@@ -1,5 +1,10 @@
 # React Portfolio by Taeyong Lee
+This is web application to show Taeyong Lee's portfolio.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Technologies Used
+1. React.js
+2. Bootstrap
 
 ## Installation
 No additional installation required for this application basically. 
