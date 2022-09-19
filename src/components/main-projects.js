@@ -18,14 +18,6 @@ function Projects() {
             github: "https://github.com/edgarmendez94/virtual-library",
         },
         {
-            name: "Cub2Bear",
-            image: cloth,
-            description: "A sample e-commerce web application that allows users can sell and purchase clothing for their babies.",
-            tech: "Bootstrap, Vanilla JS, Express.js, Sequelize",
-            app: "https://cub2bear.herokuapp.com/",
-            github: "https://github.com/Lunirs/cub2bear"
-        },
-        {
             name: "News Crawler",
             image: news,
             description: "A sample web application that allows users to view news sources from around the world in an easy manner in developing our application we decided to render current news articles using server-side APIs.",
