@@ -47,8 +47,8 @@ function Projects() {
             image: editor,
             description: "Text editor that runs in the browser. The application meets the PWA criteria for using in offline",
             tech: "Node.js, Express.js, Webpack",
-            app: "https://github.com/d104601/text_editor",
-            github: "https://jate-by-taeyong-lee.herokuapp.com/"
+            app: "https://jate-by-taeyong-lee.herokuapp.com/",
+            github: "https://github.com/d104601/text_editor"
         },
         {
             name: "Weather Dashboard",
@@ -82,10 +82,10 @@ function Projects() {
                                 <div className='card-body text-center'>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">
-                                            <a href={project.app} className="btn btn-dark btn-block">App Page</a>
+                                            <a href={project.app} className="btn btn-dark btn-block">Live Demo</a>
                                         </li>
                                         <li class="list-group-item">
-                                            <a href={project.github} className="btn btn-dark btn-block">Github</a>
+                                            <a href={project.github} className="btn btn-dark btn-block">Repository</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -114,10 +114,10 @@ function Projects() {
                                 <div className='card-body text-center'>
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item">
-                                            <a href={project.app} className="btn btn-dark btn-block">App Page</a>
+                                            <a href={project.app} className="btn btn-dark btn-block">Live Demo</a>
                                         </li>
                                         <li class="list-group-item">
-                                            <a href={project.github} className="btn btn-dark btn-block">Github</a>
+                                            <a href={project.github} className="btn btn-dark btn-block">Repository</a>
                                         </li>
                                     </ul>
                                 </div>

@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 
 function Resume() {
     const [languages] = useState([
-        "Java", "Python", "Javascript", "Kotlin"
+        "HTML", "CSS", "Java", "JavaScript", "Kotlin", "Python", "SQL", "NoSQL"
     ]);
-    const [frontEnd] = useState([
-        "HTML", "CSS", "Bootstrap", "Tailwind CSS", "React"
+    const [technologies] = useState([
+        "Git", "Node.js", "React.js", "Heroku", "MySQL", "PostgreSQL", "MongoDB", "Bootstrap", "Tailwind CSS", "GraphQL"
     ]);
-    const [backEnd] = useState([
-        "Node.js", "Express", "MySQL", "MongoDB"
+    const [others] = useState([
+        "Agile", "Algorithm analysis", "Responsive Design"
     ]);
 
     return(
@@ -25,20 +25,20 @@ function Resume() {
                 })}
             </ul>
 
-            <h3>Front-End</h3>
+            <h3>Technologies</h3>
             <ul class="my-3 list-group list-group-flush">
-                {frontEnd.map(front => {
+                {technologies.map(tech => {
                     return (
-                        <li class="list-group-item">{front}</li>
+                        <li class="list-group-item">{tech}</li>
                     )
                 })}
             </ul>
 
             <h3>Back-End</h3>
             <ul class="my-3 list-group list-group-flush">
-                {backEnd.map(back => {
+                {others.map(list => {
                     return (
-                        <li class="list-group-item">{back}</li>
+                        <li class="list-group-item">{list}</li>
                     )
                 })}
             </ul>
