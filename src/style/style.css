@@ -1,22 +1,29 @@
+
+
 img {
     max-height: 300px;
     max-width: 300px;
 }
 
-.rgba {
-    background-color: rgba( 255, 255, 255, 0.7 );
-    min-width: 100vw;
+section {
+    display: flex;
     min-height: 100vh;
+    align-items: center;
 }
 
-main {
-    display:flex;
-    min-height: 70vh;
-    align-items:center;
+.rgba {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#home {
+    background: url("../data/img/bg.jpg") center;
+    background-size: cover;
 }
 
 #root {
     font-family: sans-serif;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 @media (max-width: 767px) {

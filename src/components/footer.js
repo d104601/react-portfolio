@@ -7,8 +7,8 @@ import {
 
 function footer() {
     return (
-        <div className="container text-center pb-3">
-            <ul className="nav justify-content-center border-bottom pb-3 mb-3">
+        <div className="container text-center pb-3 border-top">
+            <ul className="nav justify-content-center pb-3 mb-3">
                 <li className="nav-item">
                     <a className="nav-link px-2 fs-2 text-black" href="https://github.com/d104601">
                         <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
